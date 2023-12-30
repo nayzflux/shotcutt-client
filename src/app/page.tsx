@@ -36,7 +36,7 @@ const LandingPage = () => {
           </Button>
 
           <Button asChild className="px-10 py-6 text-xl" variant="link">
-            <Link href={"/princing"}>See our pricing</Link>
+            <Link href={"/pricing"}>See our pricing</Link>
           </Button>
         </div>
       </section>
