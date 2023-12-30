@@ -94,10 +94,10 @@ const LandingPage = () => {
 
       <section className="w-full bg-gradient-to-tl from-blue-500 to-rose-600 rounded-lg">
         <div className="flex gap-16 w-full h-full items-center justify-center py-24 rounded-full">
-          <Button className="px-10 py-6 text-xl shadow">
+          <Button className="px-10 py-6 text-xl shadow" asChild>
             <Link href={"/auth/sign-up"}>Get started</Link>
           </Button>
-          <Button className="px-10 py-6 text-xl shadow" variant="outline">
+          <Button className="px-10 py-6 text-xl shadow" variant="outline" asChild>
             <Link href={"/princing"}>See our pricing</Link>
           </Button>
         </div>
