@@ -58,13 +58,13 @@ const SubscriptionPage = () => {
         <CardContent>
           <div className="grid grid-cols-2">
             <div className="grid grid-rows-2">
-              <p>Nom</p>
+              <p>Name</p>
               <p>Billing adress</p>
             </div>
 
             <div className="grid grid-rows-2">
-              <p>Nino BELAOUD</p>
-              <p>FR</p>
+              <p>-----------------</p>
+              <p>-----------------</p>
             </div>
           </div>
         </CardContent>
@@ -97,11 +97,11 @@ const SubscriptionPage = () => {
 
             <div className="grid grid-rows-4">
               <div>
-                <Badge>Payée</Badge>
+                <Badge>Paid</Badge>
               </div>
 
               <div>
-                <Badge>Payée</Badge>
+                <Badge>Paid</Badge>
               </div>
             </div>
 
