@@ -74,7 +74,7 @@ const LandingPage = () => {
             </h4>
 
             <div className="flex">
-              <Button className="px-10 py-6 text-xl shadow">
+              <Button className="px-10 py-6 text-xl shadow" asChild>
                 <Link href={"/auth/sign-up"}>Start for Free</Link>
               </Button>
             </div>
@@ -97,8 +97,12 @@ const LandingPage = () => {
           <Button className="px-10 py-6 text-xl shadow" asChild>
             <Link href={"/auth/sign-up"}>Get started</Link>
           </Button>
-          <Button className="px-10 py-6 text-xl shadow" variant="outline" asChild>
-            <Link href={"/princing"}>See our pricing</Link>
+          <Button
+            className="px-10 py-6 text-xl shadow"
+            variant="outline"
+            asChild
+          >
+            <Link href={"/pricing"}>See our pricing</Link>
           </Button>
         </div>
       </section>
