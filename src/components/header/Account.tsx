@@ -35,49 +35,55 @@ const Account = () => {
   }
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">
-          <div className="flex items-center gap-4">
-            <p>{data.name}</p>
+    <div className="flex gap-4">
+      <Button asChild variant="link">
+        <Link href="/dashboard">Go to Dasboard</Link>
+      </Button>
 
-            <Avatar className="h-5 w-5">
-              <AvatarImage src={data.avatar_url} />
-              <AvatarFallback>{data.name[0]}</AvatarFallback>
-            </Avatar>
-          </div>
-        </Button>
-      </DropdownMenuTrigger>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline">
+            <div className="flex items-center gap-4">
+              <p>{data.name}</p>
 
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
+              <Avatar className="h-5 w-5">
+                <AvatarImage src={data.avatar_url} />
+                <AvatarFallback>{data.name[0]}</AvatarFallback>
+              </Avatar>
+            </div>
+          </Button>
+        </DropdownMenuTrigger>
 
-        <Link href="/account/profile">
-          <DropdownMenuItem className="cursor-pointer">
-            Profile
-          </DropdownMenuItem>
-        </Link>
+        <DropdownMenuContent>
+          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuSeparator />
 
-        <Link href="/account/subscription">
-          <DropdownMenuItem className="cursor-pointer">
-            Subscription
-          </DropdownMenuItem>
-        </Link>
+          <Link href="/account/profile">
+            <DropdownMenuItem className="cursor-pointer">
+              Profile
+            </DropdownMenuItem>
+          </Link>
 
-        <DropdownMenuSeparator />
+          <Link href="/account/subscription">
+            <DropdownMenuItem className="cursor-pointer">
+              Subscription
+            </DropdownMenuItem>
+          </Link>
 
-        <Link href="/dashboard">
-          <DropdownMenuItem className="cursor-pointer">
-            Go to Dashboard
-          </DropdownMenuItem>
-        </Link>
+          <DropdownMenuSeparator />
 
-        <DropdownMenuSeparator />
+          <Link href="/dashboard">
+            <DropdownMenuItem className="cursor-pointer">
+              Go to Dashboard
+            </DropdownMenuItem>
+          </Link>
 
-        <LogoutButton />
-      </DropdownMenuContent>
-    </DropdownMenu>
+          <DropdownMenuSeparator />
+
+          <LogoutButton />
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   );
 };
 
