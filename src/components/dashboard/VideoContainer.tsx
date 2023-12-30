@@ -47,7 +47,7 @@ const VideoContainer = () => {
       socket.off("video_process_start", onProcessStart);
       socket.disconnect();
     };
-  }, []);
+  }, [socket]);
 
   const onProcessSuccess = () => {
     queryClient.invalidateQueries({
@@ -115,7 +115,7 @@ const VideoContainer = () => {
         <GhostIcon className=" stroke-1 h-[300px] w-[300px]" />
 
         <p className="font-semibold text-xl">
-          You don't have uploaded video yet!
+          {"You don't have uploaded video yet!"}
         </p>
 
         <UploadVideoModal />

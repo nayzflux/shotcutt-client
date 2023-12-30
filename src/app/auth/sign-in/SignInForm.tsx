@@ -3,7 +3,6 @@
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -25,7 +24,6 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
-import { FcGoogle } from "react-icons/fc";
 import { FaDiscord, FaGithub, FaSpotify } from "react-icons/fa";
 import Link from "next/link";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -85,7 +83,7 @@ const SignInForm = () => {
       <CardHeader>
         <CardTitle>Sign-In</CardTitle>
         <CardDescription>
-          Welcome back! We're thrilled to have you with us again.
+          {"Welcome back! We're thrilled to have you with us again."}
         </CardDescription>
       </CardHeader>
 
@@ -176,7 +174,7 @@ const SignInForm = () => {
           </div>
 
           <p>
-            Don't have an account?{" "}
+            {"Don't have an account? "}
             <Link
               href="/auth/sign-up"
               className="self-end text-blue-500 hover:underline"
