@@ -3,9 +3,9 @@ import UploadVideoModal from "@/components/modals/UploadVideoModal";
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 
-const LandingPage = () => {
+const DashboardPage = () => {
   return (
-    <main className="flex flex-col w-full gap-8 px-16 py-8 xl:px-32 xl-py-16 2xl:px-64">
+    <main className="flex flex-col w-full gap-8">
       <div className="flex items-center">
         <h2 className="uppercase font-semibold text-2xl">Videos dashboard</h2>
 
@@ -21,4 +21,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default DashboardPage;
