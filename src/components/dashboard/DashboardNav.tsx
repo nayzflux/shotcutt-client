@@ -23,7 +23,7 @@ const DashboardNav = () => {
     <nav>
       <ul className="flex text-lg gap-2">
         {routes.map(({ label, href }) => (
-          <li className={cn(pathname === href && "border-b-2 border-black")}>
+          <li key={label} className={cn(pathname === href && "border-b-2 border-black")}>
             <Link href={href} className="p-4">
               {label}
             </Link>
