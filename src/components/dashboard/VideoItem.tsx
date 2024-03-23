@@ -16,7 +16,6 @@ const VideoItem = ({ video }: { video: Video }) => {
           <AspectRatio ratio={16 / 9}>
             <video
               src={getVideoUrl(video)}
-              autoPlay
               className="h-full -full bg-neutral-200 rounded-lg"
             />
 
