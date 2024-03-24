@@ -12,7 +12,7 @@ import { getVideoUrl } from "@/lib/api";
 
 const VideoPlayer = ({ video }: { video: Video }) => {
     return (
-        <MediaPlayer title={video.name} src={getVideoUrl(video)}>
+        <MediaPlayer muted title={video.name} src={getVideoUrl(video)}>
             <MediaProvider></MediaProvider>
 
             <DefaultVideoLayout icons={defaultLayoutIcons} />

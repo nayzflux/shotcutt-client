@@ -11,10 +11,12 @@ const Step = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="flex flex-col gap-2 bg-white p-4 rounded-lg shadow-lg">
+    <div className="flex flex-col gap-2 bg-white dark:bg-soft-black p-4 rounded-lg shadow-lg">
       <Separator className="h-0.5 rounded-full" />
 
-      <p className="font-medium text-transparent bg-clip-text bg-gradient-to-tl from-blue-400 to-rose-400">Step {i}</p>
+      <p className="font-medium text-transparent bg-clip-text bg-gradient-to-tl from-blue-400 to-rose-400">
+        Step {i}
+      </p>
 
       <p className="text-xl font-semibold">{title}</p>
 

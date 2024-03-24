@@ -15,6 +15,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import LogoutButton from "./LogoutButton";
 import { useAuth } from "@/hooks/useAuth";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Account = () => {
   const { data, isPending, isError } = useAuth();
@@ -54,7 +55,7 @@ const Account = () => {
           </Button>
         </DropdownMenuTrigger>
 
-        <DropdownMenuContent>
+        <DropdownMenuContent className="dark:dark">
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
 
@@ -69,6 +70,12 @@ const Account = () => {
               Subscription
             </DropdownMenuItem>
           </Link>
+
+          <DropdownMenuSeparator />
+
+          <DropdownMenuItem>
+            <ThemeSwitch/>
+          </DropdownMenuItem>
 
           <DropdownMenuSeparator />
 

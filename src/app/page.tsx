@@ -7,7 +7,7 @@ import React from "react";
 
 const LandingPage = () => {
   return (
-    <main className="flex-grow flex flex-col items-center gap-20 2xl:gap-32 px-48 py-8 xl:px-32 xl:py-16 2xl:px-64 bg-grid">
+    <main className="flex-grow flex flex-col items-center gap-20 2xl:gap-32 px-48 py-8 xl:px-32 xl:py-16 2xl:px-64">
       <section className="flex flex-col text-center gap-8">
         <h1 className="text-6xl font-bold">
           Start{" "}
