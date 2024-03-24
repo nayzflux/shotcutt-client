@@ -1,3 +1,4 @@
+import Preset from "@/types/Preset";
 import Video from "@/types/Video";
 import axios from "axios";
 
@@ -120,11 +121,11 @@ export const updateUser = async (
  * Videos
  */
 
-export const uploadVideo = async (file: File): Promise<Video> => {
+export const uploadVideo = async (file: File, preset: Preset): Promise<Video> => {
   const formData = new FormData();
   formData.append("video", file);
 
-  const response = await axios.post(`${API_URL}/videos`, formData, {
+  const response = await axios.post(`${API_URL}/videos?preset=${preset}`, formData, {
     withCredentials: true,
   });
 
