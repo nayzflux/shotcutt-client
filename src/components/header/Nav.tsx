@@ -17,7 +17,7 @@ const Nav = () => {
     },
     {
       label: "Github",
-      herf: "https://github.com",
+      herf: "https://github.com/nayzflux/shotcutt-client",
     },
   ];
 
