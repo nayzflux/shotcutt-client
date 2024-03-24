@@ -11,7 +11,6 @@ import {
     DialogTrigger,
 } from "../ui/dialog";
 import Video from "@/types/Video";
-import { Badge } from "../ui/badge";
 import { humanFileSize } from "@/lib/format";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import { getVideoUrl, getZipUrl } from "@/lib/api";
@@ -20,6 +19,8 @@ import { ScrollArea } from "../ui/scroll-area";
 import DownloadButton from "./download/DownloadButton";
 import VideoPlayer from "../player/VideoPlayer";
 import StatusBadge from "./StatusBadge";
+import Badge from "./Badge";
+
 
 const VideoDetails = ({
     children,
