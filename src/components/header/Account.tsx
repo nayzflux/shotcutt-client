@@ -16,6 +16,7 @@ import Link from "next/link";
 import LogoutButton from "./LogoutButton";
 import { useAuth } from "@/hooks/useAuth";
 import ThemeSwitch from "./ThemeSwitch";
+import { CreditCardIcon, LayoutDashboardIcon, User } from "lucide-react";
 
 const Account = () => {
   const { data, isPending, isError } = useAuth();
@@ -61,12 +62,14 @@ const Account = () => {
 
           <Link href="/account/profile">
             <DropdownMenuItem className="cursor-pointer">
+              <User className="w-4 h-4 mr-2" />
               Profile
             </DropdownMenuItem>
           </Link>
 
           <Link href="/account/subscription">
             <DropdownMenuItem className="cursor-pointer">
+              <CreditCardIcon className="w-4 h-4 mr-2" />
               Subscription
             </DropdownMenuItem>
           </Link>
@@ -74,13 +77,14 @@ const Account = () => {
           <DropdownMenuSeparator />
 
           <DropdownMenuItem>
-            <ThemeSwitch/>
+            <ThemeSwitch />
           </DropdownMenuItem>
 
           <DropdownMenuSeparator />
 
           <Link href="/dashboard">
             <DropdownMenuItem className="cursor-pointer">
+              <LayoutDashboardIcon className="w-4 h-4 mr-2" />
               Go to Dashboard
             </DropdownMenuItem>
           </Link>
