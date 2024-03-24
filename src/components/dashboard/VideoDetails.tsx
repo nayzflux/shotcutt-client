@@ -48,7 +48,9 @@ const VideoDetails = ({
 
                             <Badge>{video.format}</Badge>
 
-                            <Badge>{video.scene_urls.length} scenes</Badge>
+                            {video.status === "PROCESSED" ? (
+                                <Badge>{video.scene_urls.length} scenes</Badge>
+                            ) : null}
                         </div>
                     </DialogDescription>
                 </DialogHeader>
@@ -62,6 +64,7 @@ const VideoDetails = ({
                         <h2 className="font-semibold text-lg">
                             Extracted Scenes
                         </h2>
+
                         <p className="text-muted-foreground text-sm">
                             You can now download secne or download all scene
                         </p>
@@ -72,27 +75,45 @@ const VideoDetails = ({
                         variant={"default"}
                         url={getZipUrl(video)}
                         label="Download All"
+                        disabled={video.status !== "PROCESSED"}
                     />
                 </div>
 
-                <ScrollArea className="rounded-md border p-4">
-                    <div className="grid grid-cols-3 gap-4">
-                        {video.scene_urls.map((url, i) => (
-                            <div
-                                key={url}
-                                className="flex items-center justify-between"
-                            >
-                                <p>{i + 1}.</p>
+                {video.status === "PROCESSED" ? (
+                    <ScrollArea className="rounded-md border p-4">
+                        <div className="grid grid-cols-3 gap-4">
+                            {video.scene_urls.map((url, i) => (
+                                <div
+                                    key={url}
+                                    className="flex items-center justify-between"
+                                >
+                                    <p>{i + 1}.</p>
 
-                                <DownloadScene
-                                    video={video}
-                                    i={i}
-                                    scene_url={url}
-                                />
-                            </div>
-                        ))}
+                                    <DownloadScene
+                                        video={video}
+                                        i={i}
+                                        scene_url={url}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </ScrollArea>
+                ) : (
+                    <div className="flex justify-center items-center">
+                        {video.status === "PROCESSING" ||
+                        video.status === "WAITING" ? (
+                            <p className="font-semibold">
+                                Extracted scene are currently not available,
+                                please wait until processing finish
+                            </p>
+                        ) : (
+                            <p className="font-semibold">
+                                Oops, video processing failed, please wait next
+                                processing or reupload the video
+                            </p>
+                        )}
                     </div>
-                </ScrollArea>
+                )}
 
                 <DialogFooter></DialogFooter>
             </DialogContent>

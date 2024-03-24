@@ -11,6 +11,7 @@ const DownloadButton = ({
   label,
   variant,
   filename,
+  disabled,
 }: {
   url: string;
   label: string;
@@ -23,7 +24,8 @@ const DownloadButton = ({
     | "ghost"
     | "link"
     | null
-    | undefined;
+  | undefined;
+    disabled?: boolean;
 }) => {
   const handleDownload = async () => {
     toast({
@@ -69,6 +71,7 @@ const DownloadButton = ({
       value="download"
       onClick={handleDownload}
       className="items-center gap-2"
+      disabled={disabled}
     >
       <ArrowDownTrayIcon className="h-6 w-6" />
       <p>{label}</p>
