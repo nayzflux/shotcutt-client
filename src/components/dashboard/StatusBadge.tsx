@@ -10,7 +10,7 @@ const StatusBadge = ({
         <span
             className={cn(
                 "p-1  bg-opacity-30 text-xs rounded",
-                status === "PROCESSING" && "bg-green-600 text-green-500",
+                status === "PROCESSED" && "bg-green-600 text-green-500",
                 status === "WAITING" ||
                     (status === "PROCESSING" && "bg-blue-600 text-blue-500"),
                 status === "FAILED" && "bg-red-600 text-red-500",
