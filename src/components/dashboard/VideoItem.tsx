@@ -6,6 +6,7 @@ import Video from "@/types/Video";
 import { getVideoUrl } from "@/lib/api";
 import VideoDetails from "./VideoDetails";
 import VideoContextMenu from "./VideoContextMenu";
+import StatusBadge from "./StatusBadge";
 
 const VideoItem = ({ video }: { video: Video }) => {
     return (
@@ -19,7 +20,7 @@ const VideoItem = ({ video }: { video: Video }) => {
                         />
 
                         <div className="absolute top-2 left-2">
-                            <Badge>{video.status}</Badge>
+                            <StatusBadge status={video.status} />
                         </div>
                     </AspectRatio>
 

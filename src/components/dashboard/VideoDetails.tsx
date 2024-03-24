@@ -19,6 +19,7 @@ import DownloadScene from "./download/DownloadScene";
 import { ScrollArea } from "../ui/scroll-area";
 import DownloadButton from "./download/DownloadButton";
 import VideoPlayer from "../player/VideoPlayer";
+import StatusBadge from "./StatusBadge";
 
 const VideoDetails = ({
     children,
@@ -42,7 +43,7 @@ const VideoDetails = ({
                     <DialogDescription>
                         {/* Throw an error? */}
                         <div className="flex gap-2 mt-2">
-                            <Badge>{video.status}</Badge>
+                            <StatusBadge status={video.status} />
 
                             <Badge>{humanFileSize(video.size)}</Badge>
 
