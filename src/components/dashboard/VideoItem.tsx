@@ -6,7 +6,6 @@ import { getVideoUrl } from "@/lib/api";
 import VideoDetails from "./VideoDetails";
 import VideoContextMenu from "./VideoContextMenu";
 import StatusBadge from "./StatusBadge";
-import { MediaProvider, Thumbnail } from "@vidstack/react";
 
 const VideoItem = ({ video }: { video: Video }) => {
   return (

@@ -2,29 +2,22 @@ import Timeline from "@/components/landing/Timeline";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const LandingPage = () => {
   return (
-    <main className="flex-grow flex flex-col items-center gap-20 2xl:gap-32 px-48 py-8 xl:px-32 xl:py-16 2xl:px-64">
-      <section className="flex flex-col text-center gap-8">
+    <main className="flex-grow flex flex-col items-center gap-20 2xl:gap-32 px-48 py-8 xl:px-32 xl:py-16 2xl:px-64 3xl:px-[400px]">
+      <section className="flex flex-col text-center gap-8 py-32 text-[#f1f1f1]">
         <h1 className="text-6xl font-bold">
-          Start{" "}
-          <strong className="text-transparent bg-clip-text bg-gradient-to-tl from-blue-500 to-rose-600">
-            splitting
-          </strong>{" "}
-          your <br />
-          video in{" "}
-          <strong className="text-transparent bg-clip-text bg-gradient-to-tl from-blue-500 to-rose-600">
-            seconds
-          </strong>
-          .
+          Cut your <strong className="border-b-4 border-blue-500">clips</strong>{" "}
+          using <br />
+          <strong className="border-b-4 border-blue-500">AI</strong> &{" "}
+          <strong className="border-b-4 border-blue-500">Automation</strong>.
         </h1>
 
-        <h1 className="text-6xl font-bold">Cut using AI & Automation.</h1>
-
-        <h2 className="text-xl text-muted-foreground">
+        <h2 className="text-xl text-[#8f8e94]">
           Let us handle the intricate work - allow the magic of automatic
           <br />
           scene detection to set your creativity free!
@@ -41,53 +34,56 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section className="flex items-center justify-center">
-        <h3 className="text-5xl font-bold text-center">
+      <div className="w-full">
+        <AspectRatio ratio={16 / 9}>
+          <Image
+            className="rounded-lg shadow-2xl shadow-white"
+            src="/dashboard.webp"
+            alt=""
+            fill
+          />
+        </AspectRatio>
+      </div>
+
+      <section className="flex items-center justify-center py-32">
+        <h3 className="text-5xl font-bold text-center text-[#f1f1f1] leading-snug">
           Video editors, ever faced the{" "}
-          <strong className="text-transparent bg-clip-text bg-gradient-to-tl from-blue-500 to-rose-600">
-            challenge
-          </strong>{" "}
-          of manually{" "}
-          <strong className="text-transparent bg-clip-text bg-gradient-to-tl from-blue-500 to-rose-600">
-            cutting
-          </strong>{" "}
-          each shot in your endless footage?
+          <strong className="border-b-4 border-blue-500">challenge</strong> of
+          manually{" "}
+          <strong className="border-b-4 border-blue-500">cutting</strong> each
+          shot in your endless footage?
         </h3>
       </section>
 
       <section className="flex flex-col gap-16">
-        <div className="grid grid-cols-2 gap-16">
-          <div className="flex flex-col gap-16">
-            <h3 className="text-5xl font-bold">
-              Try{" "}
-              <strong className="text-transparent bg-clip-text bg-gradient-to-tl from-blue-500 to-rose-600">
-                Shotcutt
-              </strong>{" "}
-              Now!
-            </h3>
+        {/* <div className="grid grid-cols-2 gap-16"> */}
+        <div className="flex flex-col gap-16">
+          <h3 className="text-5xl font-bold">
+            Try <strong className="border-b-4 border-blue-500">Shotcutt</strong>{" "}
+            Now!
+          </h3>
 
-            <h4 className="text-medium text-4xl">
-              An innovation revolutionizing video editing! Our powerful
-              algorithm automatically detects each shot change, effortlessly
-              cutting your footage into relevant clips without any effort on
-              your part.
-            </h4>
+          <h4 className="text-medium text-4xl">
+            An innovation revolutionizing video editing! Our powerful algorithm
+            automatically detects each shot change, effortlessly cutting your
+            footage into relevant clips without any effort on your part.
+          </h4>
 
-            <div className="flex">
-              <Button className="px-10 py-6 text-xl shadow" asChild>
-                <Link href={"/auth/sign-up"}>Start for Free</Link>
-              </Button>
-            </div>
+          <div className="flex">
+            <Button className="px-10 py-6 text-xl shadow" asChild>
+              <Link href={"/auth/sign-up"}>Start for Free</Link>
+            </Button>
           </div>
+        </div>
 
-          <AspectRatio ratio={16 / 9}>
+        {/* <AspectRatio ratio={16 / 9}>
             <video
               autoPlay={true}
               src="/video.webm"
               className="h-full w-full rounded-lg shadow-lg object-cover"
             />
-          </AspectRatio>
-        </div>
+          </AspectRatio> */}
+        {/* </div> */}
 
         <Timeline />
       </section>

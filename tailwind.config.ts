@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "3xl": "2000px",
+      },
       colors: {
         "soft-black": "#09090b",
         border: "hsl(var(--border))",
