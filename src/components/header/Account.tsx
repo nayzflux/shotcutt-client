@@ -49,7 +49,7 @@ const Account = () => {
               <p>{data.name}</p>
 
               <Avatar className="h-5 w-5">
-                <AvatarImage src={data.avatar_url} />
+                <AvatarImage alt="User avatar" src={data.avatar_url} />
                 <AvatarFallback>{data.name[0]}</AvatarFallback>
               </Avatar>
             </div>

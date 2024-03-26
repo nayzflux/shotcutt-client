@@ -2,14 +2,12 @@
 
 import React, { useEffect } from "react";
 import VideoItem from "./VideoItem";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { fetchVideos } from "@/lib/api";
+import { useQueryClient } from "@tanstack/react-query";
 import VideoItemSkeleton from "./VideoItemSkeleton";
 import { GhostIcon } from "lucide-react";
 import UploadVideoModal from "../modals/UploadVideoModal";
 import socket from "@/lib/socket";
 import { toast } from "../ui/use-toast";
-import { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
 import useVideos from "@/hooks/useVideos";
 

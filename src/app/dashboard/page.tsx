@@ -10,17 +10,13 @@ const DashboardPage = () => {
         <h2 className="uppercase font-semibold text-2xl">Videos dashboard</h2>
 
         <div className="ml-auto">
-          <Suspense fallback={<p>Loading...</p>}>
-            <UploadVideoModal />
-          </Suspense>
+          <UploadVideoModal />
         </div>
       </div>
 
       <Separator />
 
-      <Suspense fallback={<p>Loading...</p>}>
-        <VideoContainer />
-      </Suspense>
+      <VideoContainer />
     </main>
   );
 };
