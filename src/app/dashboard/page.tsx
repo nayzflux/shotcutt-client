@@ -1,7 +1,7 @@
 import VideoContainer from "@/components/dashboard/VideoContainer";
 import UploadVideoModal from "@/components/modals/UploadVideoModal";
 import { Separator } from "@/components/ui/separator";
-import React from "react";
+import React, { Suspense } from "react";
 
 const DashboardPage = () => {
   return (
@@ -10,13 +10,17 @@ const DashboardPage = () => {
         <h2 className="uppercase font-semibold text-2xl">Videos dashboard</h2>
 
         <div className="ml-auto">
-          <UploadVideoModal />
+          <Suspense fallback={<p>Loading...</p>}>
+            <UploadVideoModal />
+          </Suspense>
         </div>
       </div>
 
       <Separator />
 
-      <VideoContainer />
+      <Suspense fallback={<p>Loading...</p>}>
+        <VideoContainer />
+      </Suspense>
     </main>
   );
 };
