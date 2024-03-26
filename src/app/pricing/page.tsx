@@ -4,7 +4,7 @@ import React from "react";
 
 const PricingPage = () => {
   return (
-    <main className="flex flex-col items-center gap-16 px-16 py-8 xl:px-32 xl-py-16 2xl:px-64 flex-grow bg-grid">
+    <main className="flex flex-col items-center gap-16 px-16 py-8 xl:px-32 xl-py-16 2xl:px-64 flex-grow">
       <div className="flex flex-col items-center gap-8 py-4 2xl:py-20">
         <p className="text-6xl font-bold text-center">
           Start{" "}
