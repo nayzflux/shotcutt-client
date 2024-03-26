@@ -39,7 +39,7 @@ const LandingPage = () => {
           <Image
             className="rounded-lg shadow-2xl shadow-white"
             src="/dashboard.webp"
-            alt=""
+            alt="Screenshot of Shotcutt dashboard"
             fill
           />
         </AspectRatio>

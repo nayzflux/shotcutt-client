@@ -13,7 +13,8 @@ const inter = Gabarito({
 
 export const metadata: Metadata = {
   title: "Shotcutt",
-  description: "Split your footage in seconds.",
+  description:
+    "Shotcutt allows you to split your footage using AI & Automation. Let us handle the intricate work - allow the magic of automatic scene detection to set your creativity free!",
 };
 
 export default function RootLayout({
