@@ -121,13 +121,21 @@ export const updateUser = async (
  * Videos
  */
 
-export const uploadVideo = async (file: File, preset: Preset): Promise<Video> => {
+export const uploadVideo = async (
+  file: File,
+  preset: Preset,
+  cuttingMargin: string
+): Promise<Video> => {
   const formData = new FormData();
   formData.append("video", file);
 
-  const response = await axios.post(`${API_URL}/videos?preset=${preset}`, formData, {
-    withCredentials: true,
-  });
+  const response = await axios.post(
+    `${API_URL}/videos?preset=${preset}&cuttingMargin=${cuttingMargin}`,
+    formData,
+    {
+      withCredentials: true,
+    }
+  );
 
   if (response.status === 201) return response.data.video as Video;
 

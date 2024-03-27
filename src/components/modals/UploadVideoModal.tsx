@@ -38,7 +38,7 @@ const UploadVideoModal = () => {
   const queryClient = useQueryClient();
 
   const { isPending, isError, mutate } = useMutation({
-    mutationFn: (file: File) => uploadVideo(file, preset),
+    mutationFn: (file: File) => uploadVideo(file, preset, cuttingMargin),
     onMutate: async (data) => {
       setOpen(false);
 
@@ -98,6 +98,7 @@ const UploadVideoModal = () => {
 
   const [file, setFile] = useState<File | null>(null);
   const [preset, setPreset] = useState<Preset>("FAST");
+  const [cuttingMargin, setCuttingMargin] = useState<string>("0");
 
   const [open, setOpen] = useState<boolean>(false);
 
@@ -177,6 +178,35 @@ const UploadVideoModal = () => {
                   <SelectItem value="SUPERFAST">
                     Superfast / Bad quality
                   </SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <Label>
+              Cutting Margin (make cut smoother but loose some frames)
+            </Label>
+
+            <Select
+              value={cuttingMargin}
+              onValueChange={(value) => setCuttingMargin(value)}
+            >
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select a preset" />
+              </SelectTrigger>
+
+              <SelectContent className="dark:dark">
+                <SelectGroup>
+                  <SelectItem value="0">No / Preserve frames</SelectItem>
+
+                  <SelectItem value="0.05">50ms</SelectItem>
+
+                  <SelectItem value="0.10">100ms</SelectItem>
+
+                  <SelectItem value="0.25">250ms</SelectItem>
+
+                  {/* <SelectItem value="0.50">500ms</SelectItem> */}
                 </SelectGroup>
               </SelectContent>
             </Select>
