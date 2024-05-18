@@ -28,7 +28,7 @@ export default function RootLayout({
         <script
           defer
           data-domain="shotcutt.nayz.fr"
-          src="https://mc.nayz.fr/js/script.js"
+          src="https://plausible.nayz.fr/js/script.js"
         ></script>
       </head>
 
