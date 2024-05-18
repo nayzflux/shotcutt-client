@@ -24,6 +24,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          data-domain="shotcutt.nayz.fr"
+          src="https://mc.nayz.fr/js/script.js"
+        ></script>
+      </head>
+
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
