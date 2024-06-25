@@ -5,6 +5,7 @@ import Header from "@/components/header/Header";
 import { Toaster } from "@/components/ui/toaster";
 import QueryProvider from "@/providers/Providers";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import { Footer } from "@/components/footer/Footer";
 
 const inter = Gabarito({
   subsets: ["latin"],
@@ -46,6 +47,8 @@ export default function RootLayout({
               <Header />
 
               {children}
+
+              <Footer />
             </div>
           </QueryProvider>
         </ThemeProvider>
